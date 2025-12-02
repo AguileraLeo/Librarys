@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PlayerUI
 {
-    public partial class Form5 : Form
+    public partial class frmDashboard : Form
     {
-        public Form5()
+        public frmDashboard()
         {
             InitializeComponent();
         }
