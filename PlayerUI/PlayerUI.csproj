@@ -35,6 +35,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -59,29 +60,58 @@
     <Compile Include="..\..\..\gordontlibrary.Designer.cs">
       <DependentUpon>gordontlibrary.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="Datos\CategoriaDatos.cs" />
+    <Compile Include="Datos\ConexionDB.cs" />
+    <Compile Include="Datos\LibroDatos.cs" />
+    <Compile Include="Datos\MultaDatos.cs" />
+    <Compile Include="Datos\PrestamoDatos.cs" />
+    <Compile Include="Datos\UsuarioDatos.cs" />
+    <Compile Include="Modelos\Categoria.cs" />
+    <Compile Include="Modelos\EstadisticasDashboard.cs" />
+    <Compile Include="Modelos\Libro.cs" />
+    <Compile Include="Modelos\Multa.cs" />
+    <Compile Include="Modelos\Prestamo.cs" />
+    <Compile Include="Modelos\ResultadoOperacion.cs" />
+    <Compile Include="Modelos\Usuario.cs" />
+    <Compile Include="Negocio\DashboardNegocio.cs" />
+    <Compile Include="Negocio\LibroNegocio.cs" />
+    <Compile Include="Negocio\PrestamoNegocio.cs" />
+    <Compile Include="Negocio\UsuarioNegocio.cs" />
+    <Compile Include="Presentacion\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="Presentacion\frmMain.designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form3.cs">
+    <Compile Include="Presentacion\frmCatalogo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form3.designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <Compile Include="Presentacion\Form2.designer.cs">
+      <DependentUpon>frmCatalogo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form4.cs">
+    <Compile Include="Presentacion\frmMisPrestamos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form4.Designer.cs">
-      <DependentUpon>Form4.cs</DependentUpon>
+    <Compile Include="Presentacion\Form3.designer.cs">
+      <DependentUpon>frmMisPrestamos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form6.cs">
+    <Compile Include="Presentacion\frmGestionLibros.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form6.Designer.cs">
-      <DependentUpon>Form6.cs</DependentUpon>
+    <Compile Include="Presentacion\Form4.Designer.cs">
+      <DependentUpon>frmGestionLibros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmDashboard.Designer.cs">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmMenuLateral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmMenuLateral.Designer.cs">
+      <DependentUpon>frmMenuLateral.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -91,17 +121,23 @@
     <EmbeddedResource Include="..\..\..\gordontlibrary.resx">
       <DependentUpon>gordontlibrary.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="Presentacion\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <EmbeddedResource Include="Presentacion\Form2.resx">
+      <DependentUpon>frmCatalogo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form4.resx">
-      <DependentUpon>Form4.cs</DependentUpon>
+    <EmbeddedResource Include="Presentacion\Form3.resx">
+      <DependentUpon>frmMisPrestamos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form6.resx">
-      <DependentUpon>Form6.cs</DependentUpon>
+    <EmbeddedResource Include="Presentacion\Form4.resx">
+      <DependentUpon>frmGestionLibros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmDashboard.resx">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmMenuLateral.resx">
+      <DependentUpon>frmMenuLateral.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -126,6 +162,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

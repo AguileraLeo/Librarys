@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PlayerUI
 {
-    public partial class Form6 : Form
+    public partial class frmMenuLateral : Form
     {
-        public Form6()
+        public frmMenuLateral()
         {
             InitializeComponent();
         }
