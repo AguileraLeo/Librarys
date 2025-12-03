@@ -61,6 +61,7 @@
     <Compile Include="Modelos\Prestamo.cs" />
     <Compile Include="Modelos\ResultadoOperacion.cs" />
     <Compile Include="Modelos\Usuario.cs" />
+    <Compile Include="Modelos\SesionUsuario.cs" />
     <Compile Include="Negocio\DashboardNegocio.cs" />
     <Compile Include="Negocio\LibroNegocio.cs" />
     <Compile Include="Negocio\PrestamoNegocio.cs" />
@@ -101,6 +102,18 @@
     <Compile Include="Presentacion\frmMenuLateral.Designer.cs">
       <DependentUpon>frmMenuLateral.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmRegistro.Designer.cs">
+      <DependentUpon>frmRegistro.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Presentacion\frmMain.resx">
@@ -120,6 +133,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmMenuLateral.resx">
       <DependentUpon>frmMenuLateral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmRegistro.resx">
+      <DependentUpon>frmRegistro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
