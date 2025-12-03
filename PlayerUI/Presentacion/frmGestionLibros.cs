@@ -27,14 +27,13 @@ namespace PlayerUI
             ConfigurarComboBoxes();
 
             // Conectar eventos de botones
-            button2.Click += btnNuevo_Click;      // Nuevo
             button3.Click += btnGuardar_Click;    // Guardar
             button4.Click += btnEliminar_Click;   // Eliminar
-            button9.Click += btnEditar_Click;     // Editar (cargar datos)
+            button9.Click += btnNuevo_Click;      // Nuevo (cambió de btnEditar a btnNuevo)
             button1.Click += button1_Click;       // Cerrar
 
-            // Evento cuando selecciona una fila del grid
-            dataGridView1.SelectionChanged += dataGridView1_SelectionChanged;
+            // Evento cuando hace click en una fila del grid - CARGA AUTOMÁTICA
+            dataGridView1.CellClick += dataGridView1_CellClick;
         }
 
         protected override void OnLoad(EventArgs e)
@@ -168,20 +167,47 @@ namespace PlayerUI
         }
 
         /// <summary>
-        /// Evento cuando cambia la selección del grid
+        /// Evento cuando hace CLICK en una celda del DataGridView
+        /// CARGA AUTOMÁTICAMENTE los datos del libro en los TextBox
         /// </summary>
-        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count > 0)
+            // Verificar que no sea el header y que haya una fila válida
+            if (e.RowIndex < 0 || e.RowIndex >= dataGridView1.Rows.Count)
+                return;
+
+            try
             {
-                // Habilitar botones de Editar y Eliminar
-                button9.Enabled = true;
-                button4.Enabled = true;
+                DataGridViewRow fila = dataGridView1.Rows[e.RowIndex];
+
+                // Verificar que la fila no esté vacía
+                if (fila.Cells["id"].Value == null)
+                    return;
+
+                // Cargar datos en los TextBox automáticamente
+                libroIdSeleccionado = Convert.ToInt32(fila.Cells["id"].Value);
+                textBox1.Text = fila.Cells["titulo"].Value?.ToString() ?? "";
+                textBox2.Text = fila.Cells["autor"].Value?.ToString() ?? "";
+                textBox3.Text = fila.Cells["isbn"].Value?.ToString() ?? "";
+
+                // Obtener datos completos del libro para categoría, editorial, tipo y stock
+                DataTable libroCompleto = libroDatos.ObtenerPorId(libroIdSeleccionado);
+                if (libroCompleto.Rows.Count > 0)
+                {
+                    DataRow row = libroCompleto.Rows[0];
+                    textBox4.Text = row["editorial"]?.ToString() ?? "";
+                    comboBox1.SelectedValue = row["categoriaID"];
+                    comboBox2.SelectedItem = row["tipoRecurso"]?.ToString() ?? "Digital";
+                    domainUpDown2.Text = row["stockTotal"]?.ToString() ?? "1";
+                }
+
+                // Poner foco en el primer campo para editar
+                textBox1.Focus();
             }
-            else
+            catch (Exception ex)
             {
-                button9.Enabled = false;
-                button4.Enabled = false;
+                MessageBox.Show($"Error al cargar datos del libro: {ex.Message}",
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -292,39 +318,6 @@ namespace PlayerUI
             }
         }
 
-        /// <summary>
-        /// Botón EDITAR - Carga los datos del libro seleccionado en los campos
-        /// </summary>
-        private void btnEditar_Click(object sender, EventArgs e)
-        {
-            if (dataGridView1.SelectedRows.Count == 0)
-            {
-                MessageBox.Show("Selecciona un libro para editar",
-                    "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-
-            DataGridViewRow fila = dataGridView1.SelectedRows[0];
-
-            // Cargar datos en los campos
-            libroIdSeleccionado = Convert.ToInt32(fila.Cells["id"].Value);
-            textBox1.Text = fila.Cells["titulo"].Value.ToString();
-            textBox2.Text = fila.Cells["autor"].Value.ToString();
-            textBox3.Text = fila.Cells["isbn"].Value.ToString();
-            textBox4.Text = fila.Cells["editorial"].Value?.ToString();
-
-            // Obtener datos completos del libro para tener categoriaID
-            DataTable libroCompleto = libroDatos.ObtenerPorId(libroIdSeleccionado);
-            if (libroCompleto.Rows.Count > 0)
-            {
-                DataRow row = libroCompleto.Rows[0];
-                comboBox1.SelectedValue = row["categoriaID"];
-                comboBox2.SelectedItem = row["tipoRecurso"].ToString();
-                domainUpDown2.Text = row["stockTotal"].ToString();
-            }
-
-            textBox1.Focus();
-        }
 
         /// <summary>
         /// Botón ELIMINAR - Elimina el libro seleccionado

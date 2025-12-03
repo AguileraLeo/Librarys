@@ -91,8 +91,8 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -332,8 +332,8 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button9
-            // 
+            // button9 - NUEVO LIBRO (limpia campos)
+            //
             this.button9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
             this.button9.FlatAppearance.BorderSize = 0;
@@ -345,7 +345,7 @@
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(229, 49);
             this.button9.TabIndex = 28;
-            this.button9.Text = "Agregar Libro";
+            this.button9.Text = "Nuevo Libro";
             this.button9.UseVisualStyleBackColor = false;
             // 
             // groupBox2
@@ -382,8 +382,8 @@
             this.button4.Text = "Borrar Libro";
             this.button4.UseVisualStyleBackColor = false;
             // 
-            // button3
-            // 
+            // button3 - GUARDAR (crea o actualiza)
+            //
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
             this.button3.FlatAppearance.BorderSize = 0;
@@ -395,11 +395,11 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(229, 49);
             this.button3.TabIndex = 31;
-            this.button3.Text = "Editar Libro";
+            this.button3.Text = "Guardar";
             this.button3.UseVisualStyleBackColor = false;
             // 
-            // button2
-            // 
+            // button2 - ELIMINADO (era el botón Filtrar)
+            //
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
             this.button2.FlatAppearance.BorderSize = 0;
@@ -413,6 +413,7 @@
             this.button2.TabIndex = 30;
             this.button2.Text = "Filtrar";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Visible = false;
             // 
             // textBox5
             // 
