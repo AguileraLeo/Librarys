@@ -10,16 +10,21 @@ using System.Windows.Forms;
 
 namespace PlayerUI
 {
-    public partial class Form4 : Form
+    public partial class frmCatalogo : Form
     {
-        public Form4()
+        public frmCatalogo()
         {
             InitializeComponent();
         }
 
-        private void domainUpDown1_SelectedItemChanged(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

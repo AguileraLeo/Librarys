@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace PlayerUI
 {
-    public partial class Form2 : Form
+    public partial class frmMisPrestamos : Form
     {
-        public Form2()
+        public frmMisPrestamos()
         {
             InitializeComponent();
         }
 
         private void button5_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
         {
             this.Close();
         }

@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace PlayerUI
 {
-    public partial class Form3 : Form
+    public partial class frmGestionLibros : Form
     {
-        public Form3()
+        public frmGestionLibros()
         {
             InitializeComponent();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void domainUpDown1_SelectedItemChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
         }

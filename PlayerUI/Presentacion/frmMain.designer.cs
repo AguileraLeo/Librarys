@@ -31,13 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.panelSideMenu = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnLtrlDashboard = new System.Windows.Forms.Button();
+            this.btnLtrlGestionLibros = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnEqualizer = new System.Windows.Forms.Button();
             this.panelMediaSubMenu = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnLtrlPrestamos = new System.Windows.Forms.Button();
+            this.btnLtrlBuscarLibros = new System.Windows.Forms.Button();
             this.btnMedia = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -71,47 +71,49 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.btnLtrlDashboard);
+            this.panel1.Controls.Add(this.btnLtrlGestionLibros);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 262);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(250, 82);
             this.panel1.TabIndex = 10;
             // 
-            // button1
+            // btnLtrlDashboard
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.Silver;
-            this.button1.Location = new System.Drawing.Point(0, 40);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(250, 36);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "DashBoard";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnLtrlDashboard.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLtrlDashboard.FlatAppearance.BorderSize = 0;
+            this.btnLtrlDashboard.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
+            this.btnLtrlDashboard.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
+            this.btnLtrlDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLtrlDashboard.ForeColor = System.Drawing.Color.Silver;
+            this.btnLtrlDashboard.Location = new System.Drawing.Point(0, 40);
+            this.btnLtrlDashboard.Name = "btnLtrlDashboard";
+            this.btnLtrlDashboard.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnLtrlDashboard.Size = new System.Drawing.Size(250, 36);
+            this.btnLtrlDashboard.TabIndex = 1;
+            this.btnLtrlDashboard.Text = "DashBoard";
+            this.btnLtrlDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLtrlDashboard.UseVisualStyleBackColor = true;
+            this.btnLtrlDashboard.Click += new System.EventHandler(this.btnLtrlDashboard_Click);
             // 
-            // button4
+            // btnLtrlGestionLibros
             // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.Silver;
-            this.button4.Location = new System.Drawing.Point(0, 0);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(250, 40);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "Gestion de Libros";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnLtrlGestionLibros.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLtrlGestionLibros.FlatAppearance.BorderSize = 0;
+            this.btnLtrlGestionLibros.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
+            this.btnLtrlGestionLibros.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
+            this.btnLtrlGestionLibros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLtrlGestionLibros.ForeColor = System.Drawing.Color.Silver;
+            this.btnLtrlGestionLibros.Location = new System.Drawing.Point(0, 0);
+            this.btnLtrlGestionLibros.Name = "btnLtrlGestionLibros";
+            this.btnLtrlGestionLibros.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnLtrlGestionLibros.Size = new System.Drawing.Size(250, 40);
+            this.btnLtrlGestionLibros.TabIndex = 0;
+            this.btnLtrlGestionLibros.Text = "Gestion de Libros";
+            this.btnLtrlGestionLibros.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLtrlGestionLibros.UseVisualStyleBackColor = true;
+            this.btnLtrlGestionLibros.Click += new System.EventHandler(this.btnLtrlGestionLibros_Click);
             // 
             // btnExit
             // 
@@ -127,8 +129,7 @@
             this.btnExit.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnExit.Size = new System.Drawing.Size(250, 45);
             this.btnExit.TabIndex = 9;
-            this.btnExit.Text = "  Exit";
-            this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExit.Text = "Salir";
             this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -156,49 +157,49 @@
             // panelMediaSubMenu
             // 
             this.panelMediaSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.panelMediaSubMenu.Controls.Add(this.button3);
-            this.panelMediaSubMenu.Controls.Add(this.button2);
+            this.panelMediaSubMenu.Controls.Add(this.btnLtrlPrestamos);
+            this.panelMediaSubMenu.Controls.Add(this.btnLtrlBuscarLibros);
             this.panelMediaSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelMediaSubMenu.Location = new System.Drawing.Point(0, 137);
             this.panelMediaSubMenu.Name = "panelMediaSubMenu";
             this.panelMediaSubMenu.Size = new System.Drawing.Size(250, 80);
             this.panelMediaSubMenu.TabIndex = 2;
             // 
-            // button3
+            // btnLtrlPrestamos
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.Silver;
-            this.button3.Location = new System.Drawing.Point(0, 40);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(250, 40);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Prestamos";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnLtrlPrestamos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLtrlPrestamos.FlatAppearance.BorderSize = 0;
+            this.btnLtrlPrestamos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
+            this.btnLtrlPrestamos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
+            this.btnLtrlPrestamos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLtrlPrestamos.ForeColor = System.Drawing.Color.Silver;
+            this.btnLtrlPrestamos.Location = new System.Drawing.Point(0, 40);
+            this.btnLtrlPrestamos.Name = "btnLtrlPrestamos";
+            this.btnLtrlPrestamos.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnLtrlPrestamos.Size = new System.Drawing.Size(250, 40);
+            this.btnLtrlPrestamos.TabIndex = 1;
+            this.btnLtrlPrestamos.Text = "Prestamos";
+            this.btnLtrlPrestamos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLtrlPrestamos.UseVisualStyleBackColor = true;
+            this.btnLtrlPrestamos.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button2
+            // btnLtrlBuscarLibros
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.Silver;
-            this.button2.Location = new System.Drawing.Point(0, 0);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(250, 40);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Buscar Libros";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnLtrlBuscarLibros.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLtrlBuscarLibros.FlatAppearance.BorderSize = 0;
+            this.btnLtrlBuscarLibros.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
+            this.btnLtrlBuscarLibros.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
+            this.btnLtrlBuscarLibros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLtrlBuscarLibros.ForeColor = System.Drawing.Color.Silver;
+            this.btnLtrlBuscarLibros.Location = new System.Drawing.Point(0, 0);
+            this.btnLtrlBuscarLibros.Name = "btnLtrlBuscarLibros";
+            this.btnLtrlBuscarLibros.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnLtrlBuscarLibros.Size = new System.Drawing.Size(250, 40);
+            this.btnLtrlBuscarLibros.TabIndex = 0;
+            this.btnLtrlBuscarLibros.Text = "Buscar Libros";
+            this.btnLtrlBuscarLibros.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLtrlBuscarLibros.UseVisualStyleBackColor = true;
+            this.btnLtrlBuscarLibros.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnMedia
             // 
@@ -260,9 +261,9 @@
             this.pictureBox9.TabIndex = 2;
             this.pictureBox9.TabStop = false;
             // 
-            // Form1
+            // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1239, 814);
@@ -272,7 +273,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(950, 600);
-            this.Name = "Form1";
+            this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.panelSideMenu.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -290,8 +291,8 @@
 
         private System.Windows.Forms.Panel panelSideMenu;
         private System.Windows.Forms.Panel panelMediaSubMenu;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnLtrlPrestamos;
+        private System.Windows.Forms.Button btnLtrlBuscarLibros;
         private System.Windows.Forms.Button btnMedia;
         private System.Windows.Forms.Button btnEqualizer;
         private System.Windows.Forms.Panel panelLogo;
@@ -300,8 +301,8 @@
         private System.Windows.Forms.Panel panelChildForm;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnLtrlDashboard;
+        private System.Windows.Forms.Button btnLtrlGestionLibros;
     }
 }
 
