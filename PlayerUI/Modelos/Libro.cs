@@ -25,7 +25,6 @@ namespace PlayerUI.Modelos
         public int StockTotal { get; set; }
 
         // Información adicional
-        public DateTime? FechaCreacion { get; set; }
         public int TotalPrestamos { get; set; } // Para estadísticas
 
         // Constructor vacío
@@ -42,7 +41,6 @@ namespace PlayerUI.Modelos
             TipoRecurso = "Digital"; // Por defecto
             StockDisponible = 1;
             StockTotal = 1;
-            FechaCreacion = DateTime.Now;
         }
 
         // Método para validar datos básicos

@@ -8,7 +8,7 @@ namespace PlayerUI.Datos
     /// Es el "puente" entre la aplicación Windows Forms y SQL Server
     public class ConexionDB
     {
-        private static string cadenaConexion = @"Server=LAPTOP-PDMTFTA9\SQLEXPRESS;Database=GordontLibrary;Trusted_Connection=True;TrustServerCertificate=True;";
+        private static string cadenaConexion = @"Server=AsusNitro5Fredo\SQLEXPRESS;Database=GordontLibrary;Trusted_Connection=True;TrustServerCertificate=True;";
         // MÉTODOS PRINCIPALES
 
         /// Obtiene una conexión a SQL Server
