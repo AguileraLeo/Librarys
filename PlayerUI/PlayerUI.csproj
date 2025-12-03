@@ -48,18 +48,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\..\..\OneDrive\Escritorio\GordontLibrary%27s Moderno.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="..\..\..\..\OneDrive\Escritorio\GordontLibrary%27s Moderno.designer.cs">
-      <DependentUpon>GordontLibrary%27s Moderno.cs</DependentUpon>
-    </Compile>
-    <Compile Include="..\..\..\gordontlibrary.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="..\..\..\gordontlibrary.Designer.cs">
-      <DependentUpon>gordontlibrary.cs</DependentUpon>
-    </Compile>
     <Compile Include="Datos\CategoriaDatos.cs" />
     <Compile Include="Datos\ConexionDB.cs" />
     <Compile Include="Datos\LibroDatos.cs" />
@@ -86,19 +74,19 @@
     <Compile Include="Presentacion\frmCatalogo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\Form2.designer.cs">
+    <Compile Include="Presentacion\frmCatalogo.designer.cs">
       <DependentUpon>frmCatalogo.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frmMisPrestamos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\Form3.designer.cs">
+    <Compile Include="Presentacion\frmMisPrestamos.designer.cs">
       <DependentUpon>frmMisPrestamos.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frmGestionLibros.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\Form4.Designer.cs">
+    <Compile Include="Presentacion\frmGestionLibros.Designer.cs">
       <DependentUpon>frmGestionLibros.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frmDashboard.cs">
@@ -115,22 +103,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="..\..\..\..\OneDrive\Escritorio\GordontLibrary%27s Moderno.resx">
-      <DependentUpon>GordontLibrary%27s Moderno.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\..\..\gordontlibrary.resx">
-      <DependentUpon>gordontlibrary.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\Form2.resx">
+    <EmbeddedResource Include="Presentacion\frmCatalogo.resx">
       <DependentUpon>frmCatalogo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\Form3.resx">
+    <EmbeddedResource Include="Presentacion\frmMisPrestamos.resx">
       <DependentUpon>frmMisPrestamos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\Form4.resx">
+    <EmbeddedResource Include="Presentacion\frmGestionLibros.resx">
       <DependentUpon>frmGestionLibros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmDashboard.resx">
