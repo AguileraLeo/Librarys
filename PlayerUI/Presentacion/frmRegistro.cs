@@ -170,5 +170,10 @@ namespace PlayerUI.Presentacion
                 btnRegistrar_Click(sender, e);
             }
         }
+
+        private void lblError_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
